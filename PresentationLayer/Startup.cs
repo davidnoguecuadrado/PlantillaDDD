@@ -15,6 +15,8 @@ using AplicationLayer.Inteface;
 
 using System;
 using DTOLayer.Mapper;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace PresentationLayer
 {
@@ -30,6 +32,7 @@ namespace PresentationLayer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
 
             //Aqui se añade la injeccion de dependencias
             services.AddTransient<ICasaAplication, CasaAplication>();
@@ -55,18 +58,32 @@ namespace PresentationLayer
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TEst", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                object p = app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PresentationLayer v1"));
             }
 
-            app.UseMvc();
+            app.UseHttpsRedirection();
 
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
         }
     }
