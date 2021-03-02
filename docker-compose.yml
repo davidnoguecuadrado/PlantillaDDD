@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  exemplopreslayer:
+    image: ${DOCKER_REGISTRY}exemplopreslayer
+    build:
+      context: .
+      dockerfile: ExemploPresLAyer\Dockerfile
