@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AplicationLayer", "AplicationLayer\AplicationLayer.csproj", "{4A9E4EB6-43CE-45B6-A6CD-BF33384080C4}"
 EndProject
@@ -27,7 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contexto", "Contexto", "{85
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.5-DTO", "0.5-DTO", "{88728AF6-B852-418C-B5E0-C99268BB834E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOLayer", "DTOLayer\DTOLayer.csproj", "{7A162250-3B7E-48CC-B61D-C0935B918207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOLayer", "DTOLayer\DTOLayer.csproj", "{7A162250-3B7E-48CC-B61D-C0935B918207}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AplicationLayerTests", "AplicationLayerTests\AplicationLayerTests.csproj", "{DEE79809-2054-42A3-8FBE-F8400E1D5487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{7A162250-3B7E-48CC-B61D-C0935B918207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A162250-3B7E-48CC-B61D-C0935B918207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A162250-3B7E-48CC-B61D-C0935B918207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE79809-2054-42A3-8FBE-F8400E1D5487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE79809-2054-42A3-8FBE-F8400E1D5487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE79809-2054-42A3-8FBE-F8400E1D5487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE79809-2054-42A3-8FBE-F8400E1D5487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{C72B3C09-78DE-47E5-92EA-B91E4C112D78} = {857F6A92-F33A-4ED2-80E5-503D221C113E}
 		{857F6A92-F33A-4ED2-80E5-503D221C113E} = {E3142842-A9FC-413B-9B2B-F8168925E36A}
 		{7A162250-3B7E-48CC-B61D-C0935B918207} = {88728AF6-B852-418C-B5E0-C99268BB834E}
+		{DEE79809-2054-42A3-8FBE-F8400E1D5487} = {5C29F034-C514-413C-A32A-9B4F45447EEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1ABF6C85-4696-4858-B242-645C07E46541}
